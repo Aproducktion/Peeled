@@ -120,7 +120,7 @@ hr {display: block;height: 1px;border: 0;border-top: 1px solid #ccc;margin: 1em 
 /* |=||=|=||=|=||=||=||=|=||=|=====|GRID|SYSTEM|=====|=|=||=|=||=|=||=||=||=|=||=||=|
 ====================================================================================
 
-FORMULA ==   .row>.wrapper>.col+.col1
+FORMULA ==   .row>.wrapper>.col+.col1 (Emmet Compatible)
 
 ==================================================================================== */
 
@@ -136,7 +136,7 @@ FORMULA ==   .row>.wrapper>.col+.col1
 .wrapper:after                      { clear: both; }
 
 /*Columns*/
-.col                                { float:left; }
+.col                                { float:left;-webkit-transition: all .5s ease;-moz-transition: all .5s ease;-ms-transition: all .5s ease;-o-transition: all .5s ease;transition: all .5s ease; }
 .col:before,.col:after              { content: " ";display: table; }
 .col:after                          { clear: both; }
 
@@ -164,22 +164,21 @@ FORMULA ==   .row>.wrapper>.col+.col1
 .col-6                              { width: 14%;float:left;margin-right: 3%}
 .col-6 + .col-6 + .col-6 + .col-6+ .col-6+ .col-6 
                                     { margin-right: 0; }
+
 /*Grid Extras*/                                    
-.push-center                        { margin: 0 6%; }
+.push-center                                { margin: 0 6%; }
 .push-center:before,.push-center:after      { content: " ";display: table; }
 .push-center:after                          { clear: both; }
 
-.h-rule                             { height: 100%;width: 0px;border: 1px solid #E7E7E7;position: absolute;top: 0px; }
-.col-2 .h-rule                      { right: 50%; }
 
 
 /*Grid Example*/
- .block                             { min-height: 250px;background: #E0E0E0;text-shadow: 0 1px 0 #fff;transition: all 1s 1s 1s;}
-.grid .block span                   { text-align: center;vertical-align: middle;line-height: 250px;display: block;font-size:50px;font-size: 110px;font-weight: bold;color: #727272; }
-.grid .row                          { margin: 40px 0; }
-.grid .noise:before                 { border-radius: 8px; } 
-
-
+.grid .block                            { min-height: 250px;background: #E0E0E0;text-shadow: 0 1px 0 #fff;transition: all 1s 1s 1s;}
+.grid .block span                       { text-align: center;vertical-align: middle;line-height: 250px;display: block;font-size:50px;font-size: 110px;font-weight: bold;color: #727272; }
+.grid .row                              { margin: 40px 0; }
+.grid .noise:before                     { border-radius: 8px; }
+.grid .block:before, .block:after       { z-index: -1; position: absolute; content: ""; bottom: 15px; left: 10px; width: 50%; top: 80%; max-width: 300px; background: rgba(0, 0, 0, 0.7); -webkit-box-shadow: 0 15px 10px rgba(0,0,0, 0.7); -moz-box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7); box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7); -webkit-transform: rotate(-3deg); -moz-transform: rotate(-3deg); -o-transform: rotate(-3deg); -ms-transform: rotate(-3deg); transform: rotate(-3deg); }
+.grid .block:after                      { -webkit-transform: rotate(3deg); -moz-transform: rotate(3deg); -o-transform: rotate(3deg); -ms-transform: rotate(3deg); transform: rotate(3deg); right: 10px; left: auto; clear: both; } 
 
 
 
@@ -306,6 +305,23 @@ only screen and (min-device-pixel-ratio : 1.5) {
 /* Styles */
 }
 
+
+/*Break for All Handheld Devices*/
+@media all and (max-width: 850px)    { 
+
+    /*Structure*/
+    .col { float:none !important; width:100% !important;margin: 20px 0;}
+    .wrapper { padding: 0 5%; }
+
+    /*Font-Sizes*/
+
+    h1 {font-size: 40px;margin-bottom: 30px;}
+    h2 {font-size: 30px;margin-bottom: 25px;}
+    h3 {font-size: 25px;}
+    h4 {font-size: 20px;}
+    h5 {font-size: 35px;}
+    h6 {font-size: 16px;}
+}
 
 /* 
 ====================================================================================
