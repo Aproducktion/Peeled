@@ -120,9 +120,15 @@ hr {display: block;height: 1px;border: 0;border-top: 1px solid #ccc;margin: 1em 
 /* |=||=|=||=|=||=||=||=|=||=|=====|GRID|SYSTEM|=====|=|=||=|=||=|=||=||=||=|=||=||=|
 ====================================================================================
 
-FORMULA ==   .row>.wrapper>.col+.col1 (Emmet Compatible)
+FORMULA FOR 100%        ==   .row>.wrapper>.col+.col1 (Emmet Compatible)
+FORMULA FOR CONTAINED   ==   .wrapper>.row>.col+.col1 (Emmet Compatible)
 
 ==================================================================================== */
+
+/*Wrapper*/
+.wrapper                            { margin: 0 auto;max-width: 1024px;padding: 0 3%; }
+.wrapper:before,.wrapper:after      { content: " ";display: table; }
+.wrapper:after                      { clear: both; }
 
 
 /*Rows*/
@@ -130,20 +136,13 @@ FORMULA ==   .row>.wrapper>.col+.col1 (Emmet Compatible)
 .row:before,.row:after              { content: " ";display: table; }
 .row:after                          { clear: both; }
 
-/*Wrapper*/
-.wrapper                            { margin: 0 auto;max-width: 1024px;padding: 0 3%; }
-.wrapper:before,.wrapper:after      { content: " ";display: table; }
-.wrapper:after                      { clear: both; }
-
 /*Columns*/
 .col                                { float:left;-webkit-transition: all .5s ease;-moz-transition: all .5s ease;-ms-transition: all .5s ease;-o-transition: all .5s ease;transition: all .5s ease; }
 .col:before,.col:after              { content: " ";display: table; }
 .col:after                          { clear: both; }
 
 /*Blocks*/
-.block                              { position: relative;transition: all .3s ease;   }
-.block:before, .block:after         { z-index: -1; position: absolute; content: ""; bottom: 15px; left: 10px; width: 50%; top: 80%; max-width: 300px; background: rgba(0, 0, 0, 0.7); -webkit-box-shadow: 0 15px 10px rgba(0,0,0, 0.7); -moz-box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7); box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7); -webkit-transform: rotate(-3deg); -moz-transform: rotate(-3deg); -o-transform: rotate(-3deg); -ms-transform: rotate(-3deg); transform: rotate(-3deg); }
-.block:after                        { -webkit-transform: rotate(3deg); -moz-transform: rotate(3deg); -o-transform: rotate(3deg); -ms-transform: rotate(3deg); transform: rotate(3deg); right: 10px; left: auto; clear: both; }
+.block                              { position: relative;transition: all .3s ease;}
 .block img                          { width:100%;overflow:hidden;-moz-border-radius: 5px; border-radius: 5px;}
 /*-------*/
 .col-1                              { width: 100% }
@@ -151,10 +150,10 @@ FORMULA ==   .row>.wrapper>.col+.col1 (Emmet Compatible)
 .col-2                              { width: 47%;float:left;margin-right: 6%}
 .col-2 + .col-2                     { margin-right: 0; }
 
-.col-3                              { width: 31%;float:left;margin-right: 3%}
+.col-3                              { width: 31%;float:left;margin-right: 3.5%}
 .col-3 + .col-3 + .col-3            { margin-right: 0; }
 
-.col-4                              { width: 22.5%;float:left;margin-right: 3%}
+.col-4                              { width: 22.5%;float:left;margin-right: 3.3%}
 .col-4 + .col-4 + .col-4 + .col-4   { margin-right: 0; }
 
 .col-5                              { width: 17.5%;float:left;margin-right: 3%}
@@ -173,7 +172,7 @@ FORMULA ==   .row>.wrapper>.col+.col1 (Emmet Compatible)
 
 
 /*Grid Example*/
-.grid .block                            { min-height: 250px;background: #E0E0E0;text-shadow: 0 1px 0 #fff;transition: all 1s 1s 1s;}
+.grid .block                            { min-height: 250px;background: #E0E0E0;text-shadow: 0 1px 0 #fff;transition: all 1s 1s 1s;border-radius: 8px; }
 .grid .block span                       { text-align: center;vertical-align: middle;line-height: 250px;display: block;font-size:50px;font-size: 110px;font-weight: bold;color: #727272; }
 .grid .row                              { margin: 40px 0; }
 .grid .noise:before                     { border-radius: 8px; }
@@ -189,16 +188,20 @@ FORMULA ==   .row>.wrapper>.col+.col1 (Emmet Compatible)
 /*      .----------.
 ________|  Header  |__________________________________________*/
 
-
+header              {  }
+nav                 {  }
 
 /*      .-----------.
 ________|  Content  |__________________________________________*/
 
-
+section             {  }
+article             {  }
+aside               {  }
 
 /*      .----------.
 ________|  Footer  |__________________________________________*/
 
+footer              {  }
 
 
 /* ------------------------>>>>>>> HELPER CLASSES <<<<<<<---------------------------
@@ -219,25 +222,25 @@ ________|  Footer  |__________________________________________*/
 .cf:before,.cf:after {content: " ";display: table;}
 .cf:after {clear: both;}
 
-.float-left   {float:left}
-.float-right  {float:right}
-.align-left   {float:left; margin: 0 15px 0 0}
-.align-right  {float:right; margin: 0 0 0 15px}
-.clear        {clear:both}
-.center       {display: table;width: 100%;height: 100%;}
-.center span  {display: table-cell; vertical-align: middle; text-align: center;}
-.margins      {margin:15px}
-.push-top     {margin-top:15px}
-.push-right   {margin-right:15px}
-.push-bottom  {margin-bottom:15px}
-.push-left    {margin-left:15px}
-.border       {border:10px solid #eee}
-.text-left    {text-align:left}
-.text-right   {text-align:right}
-.text-center  {text-align:center}
-.text-justify {text-align:justify}
-.underline    {text-decoration:underline}
-.highlight    {background-color:#ffc}
+.f-l            {float:left}
+.f-r            {float:right}
+.a-l            {float:left; margin: 0 15px 0 0}
+.a-r            {float:right; margin: 0 0 0 15px}
+.clear          {clear:both}
+.center         {display: table;width: 100%;height: 100%;}
+.center span    {display: table-cell; vertical-align: middle; text-align: center;}
+.margins        {margin:15px}
+.push-t         {margin-top:15px}
+.push-r         {margin-right:15px}
+.push-b         {margin-bottom:15px}
+.push-l         {margin-left:15px}
+.border         {border:10px solid #eee}
+.text-l         {text-align:left}
+.text-r         {text-align:right}
+.text-c         {text-align:center}
+.text-j         {text-align:justify}
+.underline      {text-decoration:underline}
+.highlight      {background-color:#ffc}
 
 /* 
 ====================================================================================
@@ -334,7 +337,7 @@ only screen and (min-device-pixel-ratio : 1.5) {
     a[href]:after                       { content: " (" attr(href) ")" }
     abbr[title]:after                   { content: " (" attr(title) ")" }
     pre, blockquote                     { border: 1px solid #999; page-break-inside: avoid; }
-    thead                               { display: table-header-group; /* h5bp.com/t */ }
+    thead                               { display: table-header-group; }
     tr, img                             { page-break-inside: avoid }
     img                                 { max-width: 100% !important }
     @page                               { margin: 0.5cm }
@@ -342,8 +345,7 @@ only screen and (min-device-pixel-ratio : 1.5) {
     h2, h3                              { page-break-after: avoid }
 
     /*Don't show links for images, or javascript/internal links*/
-    .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after
-                                        { content: "" }
+    .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after  { content: "" }
 
 /*--------------------------------------------------------------------------------*/
-/* >>>>>>>>>>================= Core Style Sheet © 2012 =================<<<<<<<<<<*/ 
+/* >>>>>>>>>>================= Peeled Style Sheet © 2013 =================<<<<<<<<<<*/ 
