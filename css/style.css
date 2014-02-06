@@ -2,7 +2,7 @@
 /*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^*/
 
 /*
-Version: Alpha v1;
+Version: Alpha v1.2;
 Author: Bryan Littlefield;
 License: GPL;
 ----------------------------
@@ -120,8 +120,10 @@ hr {display: block;height: 1px;border: 0;border-top: 1px solid #ccc;margin: 1em 
 /* |=||=|=||=|=||=||=||=|=||=|=====|GRID|SYSTEM|=====|=|=||=|=||=|=||=||=||=|=||=||=|
 ====================================================================================
 
-FORMULA FOR 100%        ==   .row>.wrapper>.col+.col1 (Emmet Compatible)
-FORMULA FOR CONTAINED   ==   .wrapper>.row>.col+.col1 (Emmet Compatible)
+FORMULA FOR 100% 1 Col          ==   .row>.col.col-1 (Emmet Compatible)
+FORMULA FOR 100% 2 Col          ==   .row>.col.col-2*2 (Emmet Compatible)
+FORMULA FOR CONTAINED 1 Col     ==   .wrapper>.row>.col.col-1 (Emmet Compatible)
+FORMULA FOR CONTAINED 2 Col     ==   .wrapper>.row>.col.col-2*2 (Emmet Compatible)
 
 ==================================================================================== */
 
@@ -168,7 +170,6 @@ FORMULA FOR CONTAINED   ==   .wrapper>.row>.col+.col1 (Emmet Compatible)
 .push-center                                { margin: 0 6%; }
 .push-center:before,.push-center:after      { content: " ";display: table; }
 .push-center:after                          { clear: both; }
-
 
 
 /*Grid Example*/
