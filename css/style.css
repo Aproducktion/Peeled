@@ -124,6 +124,7 @@ FORMULA FOR 100% 1 Col          ==   .row>.col.col-1 (Emmet Compatible)
 FORMULA FOR 100% 2 Col          ==   .row>.col.col-2*2 (Emmet Compatible)
 FORMULA FOR CONTAINED 1 Col     ==   .wrapper>.row>.col.col-1 (Emmet Compatible)
 FORMULA FOR CONTAINED 2 Col     ==   .wrapper>.row>.col.col-2*2 (Emmet Compatible)
+FORMULA FOR 100% CENTERED       ==   .row>.wrapper>.col.col-1 (Emmet Compatible)
 
 ==================================================================================== */
 
@@ -131,7 +132,6 @@ FORMULA FOR CONTAINED 2 Col     ==   .wrapper>.row>.col.col-2*2 (Emmet Compatibl
 .wrapper                            { margin: 0 auto;max-width: 1024px;padding: 0 3%; }
 .wrapper:before,.wrapper:after      { content: " ";display: table; }
 .wrapper:after                      { clear: both; }
-
 
 /*Rows*/
 .row                                { width: 100%;}
@@ -167,21 +167,24 @@ FORMULA FOR CONTAINED 2 Col     ==   .wrapper>.row>.col.col-2*2 (Emmet Compatibl
                                     { margin-right: 0; }
 
 /*Grid Extras*/                                    
-.push-center                                { margin: 0 6%; }
-.push-center:before,.push-center:after      { content: " ";display: table; }
-.push-center:after                          { clear: both; }
+.push-center                        { margin: 0 6%; }
+.push-center:before,
+.push-center:after                  { content: " ";display: table; }
+.push-center:after                  { clear: both; }
 
 
 /*Grid Example*/
-.grid .block                            { min-height: 250px;background: #E0E0E0;text-shadow: 0 1px 0 #fff;transition: all 1s 1s 1s;border-radius: 8px; }
-.grid .block span                       { text-align: center;vertical-align: middle;line-height: 250px;display: block;font-size:50px;font-size: 110px;font-weight: bold;color: #727272; }
-.grid .row                              { margin: 40px 0; }
-.grid .noise:before                     { border-radius: 8px; }
-.grid .block:before, .block:after       { z-index: -1; position: absolute; content: ""; bottom: 15px; left: 10px; width: 50%; top: 80%; max-width: 300px; background: rgba(0, 0, 0, 0.7); -webkit-box-shadow: 0 15px 10px rgba(0,0,0, 0.7); -moz-box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7); box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7); -webkit-transform: rotate(-3deg); -moz-transform: rotate(-3deg); -o-transform: rotate(-3deg); -ms-transform: rotate(-3deg); transform: rotate(-3deg); }
-.grid .block:after                      { -webkit-transform: rotate(3deg); -moz-transform: rotate(3deg); -o-transform: rotate(3deg); -ms-transform: rotate(3deg); transform: rotate(3deg); right: 10px; left: auto; clear: both; } 
+.grid .block                        { min-height: 250px;background: #E0E0E0;text-shadow: 0 1px 0 #fff;transition: all 1s 1s 1s;border-radius: 8px; }
+.grid .block span                   { text-align: center;vertical-align: middle;line-height: 250px;display: block;font-size:50px;font-size: 110px;font-weight: bold;color: #727272; }
+.grid .row                          { margin: 40px 0; }
+.grid .noise:before                 { border-radius: 8px; }
+.grid .block:before, .block:after   { z-index: -1; position: absolute; content: ""; bottom: 15px; left: 10px; width: 50%; top: 80%; max-width: 300px; background: rgba(0, 0, 0, 0.7); -webkit-box-shadow: 0 15px 10px rgba(0,0,0, 0.7); -moz-box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7); box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7); -webkit-transform: rotate(-3deg); -moz-transform: rotate(-3deg); -o-transform: rotate(-3deg); -ms-transform: rotate(-3deg); transform: rotate(-3deg); }
+.grid .block:after                  { -webkit-transform: rotate(3deg); -moz-transform: rotate(3deg); -o-transform: rotate(3deg); -ms-transform: rotate(3deg); transform: rotate(3deg); right: 10px; left: auto; clear: both; } 
 
 
-
+/*Table of Contents*/
+.toc                                { background: #2C2C2C;padding: 20px 0; margin-bottom: 20px; color: #fff; }
+.toc a                              { color: #fff; }
 
 /* ----------------------->>>>>>> PAGE STRUCTURE <<<<<<<----------------------------
 ==================================================================================== */

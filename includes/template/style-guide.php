@@ -117,13 +117,3 @@
 
 <!--______________End of Style Guide______________-->
 
-<!-- Sidebar -->
-<div id="sidebar">
-<h3>Style Guide Menu</h3>
-	<h4><a href="#headings">-Headings</a></h4>
-	<h4><a href="#paragraph">-Paragraphs</a></h4>
-	<h4><a href="#list_types">-List Types</a></h4>
-	<h4><a href="#form_elements">-Form Elements</a></h4>
-	<h4><a href="#tables">-Tables</a></h4>
-	<h4><a href="#misc">-Misc Stuff</a></h4>
-</div>
