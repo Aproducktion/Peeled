@@ -63,7 +63,7 @@ a,a:visited,a:hover,a:focus {color:#191919;text-decoration:none;}
 
 p   {font-size: 12px;margin-bottom: 15px;color: #464646;}
 em  {}
-img {}
+img { border: none; }
 img.fluid  { max-width:100%; }
 
 /*      .-------------------.
