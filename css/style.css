@@ -320,6 +320,7 @@ only screen and (min-device-pixel-ratio : 1.5) {
     /*Structure*/
     .col { float:none !important; width:100% !important;margin: 20px 0;}
     .wrapper { padding: 0 5%; }
+    img.fluid  { max-width:100%; }
 
     /*Font-Sizes*/
 
