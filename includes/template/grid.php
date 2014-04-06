@@ -1,78 +1,78 @@
 
 <h2>Grid System</h2>
-<div class="grid">
-	<div class="row">
-	    <div class="block col col-1">
+<div id="grid">
+	<div class="one column grid row">
+	    <div class="block column">
 		   	<span class="noise center">1</span>	    
 	    </div>
 	</div>
-	<div class="row">
-	    <div class="block col col-2">
+	<div class="two column grid row">
+	    <div class="block column">
 		   	<span class="noise center">2</span>	    
 	    </div>
-	    <div class="block col col-2">
+	    <div class="block column">
 	    	<span class="noise center">2</span>	    
 	    </div>
 	</div>	
-	<div class="row">
-	    <div class="block col col-3">
+	<div class="three column grid row">
+	    <div class="block column">
 		   	<span class="noise center">3</span>	    
 	    </div>
-	    <div class="block col col-3">
+	    <div class="block column">
 	    	<span class="noise center">3</span>	    
 	    </div>
-	    <div class="block col col-3">
+	    <div class="block column">
 	    	<span class="noise center">3</span>
 	    </div>
 	</div>
-	<div class="row">
-	    <div class="block col col-4">
+	<div class="four column grid row">
+	    <div class="block column">
 		   	<span class="noise center">4</span>	    
 	    </div>
-	    <div class="block col col-4">
+	    <div class="block column">
 	    	<span class="noise center">4</span>	    
 	    </div>
-	    <div class="block col col-4">
+	    <div class="block column">
 	    	<span class="noise center">4</span>
 	    </div>
-	    <div class="block col col-4">
+	    <div class="block column">
 	    	<span class="noise center">4</span>
 	    </div>	    
 	</div>
-	<div class="row">
-	    <div class="block col col-5">
+	<div class="five column grid row">
+	    <div class="block column">
 		   	<span class="noise center">5</span>	    
 	    </div>
-	    <div class="block col col-5">
+	    <div class="block column">
 	    	<span class="noise center">5</span>	    
 	    </div>
-	    <div class="block col col-5">
+	    <div class="block column">
 	    	<span class="noise center">5</span>
 	    </div>
-	    <div class="block col col-5">
+	    <div class="block column">
 	    	<span class="noise center">5</span>
 	    </div>
-	    <div class="block col col-5">	    
+	    <div class="block column">	    
 			<span class="noise center">5</span>
 	    </div>	
 	</div>
-	<div class="row">
-	    <div class="block col col-6">
+	<div class="six column grid row">
+	    <div class="block column">
 		   	<span class="noise center">6</span>	    
 	    </div>
-	    <div class="block col col-6">
+	    <div class="block column">
 	    	<span class="noise center">6</span>	    
 	    </div>
-	    <div class="block col col-6">
+	    <div class="block column">
 	    	<span class="noise center">6</span>
 	    </div>
-	    <div class="block col col-6">
+	    <div class="block column">
 	    	<span class="noise center">6</span>
 	    </div>	    
-	    <div class="block col col-6">	    
+	    <div class="block column">	    
 			<span class="noise center">6</span>
 	    </div>
-	    <div class="block col col-6">	    
+	    <div class="block column">	    
 			<span class="noise center">6</span>
 	    </div>		    	
 	</div>
