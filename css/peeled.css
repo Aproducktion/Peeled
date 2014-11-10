@@ -11,7 +11,7 @@ License: GPL;
 |===TABLE OF CONTENTS===|
 
 I.................GLOBALS
-II.........PAGE STRUCTURE
+II............GRID SYSTEM
 III..........PAGE STYLING
 IV..........MEDIA QUERIES
 V.................HELPERS
@@ -28,6 +28,7 @@ _______/   HTML & BODY   \____________________________________*/
 html{
         background: #ffffff;
         font-size: 62.5%;
+        overflow-x: hidden;
         -webkit-overflow-scrolling: touch;
         -webkit-tap-highlight-color: #f3f5f6;
         -webkit-text-size-adjust: 100%;
@@ -43,56 +44,72 @@ body{
         padding: 0;
     }
 
-/*      .--------------.
-________|  Selections  |______________________________________ */
+/*Placeholder Styling*/
+::-webkit-input-placeholder { color:#4d4d4d; }
+:-moz-placeholder           { color:#4d4d4d; }
+::-moz-placeholder          { color:#4d4d4d; }
+:-ms-input-placeholder      { color:#4d4d4d; }    
 
-::-moz-selection {background: #b3d4fc;text-shadow: none;}
-::selection      {background: #b3d4fc;text-shadow: none;}
-
-/*      .-----------.
-________|  Headers  |__________________________________________ */
-
-h1,h2,h3,h4 {margin: 0 0 10px 0;}
-
-h1 {font-size: 35px;}
-h2 {font-size: 25px;}
-h3 {font-size: 20px;}
-h4 {font-size: 15px;}
-
-/*      .----------------------.
-________|  Paragraph Elements  |________________________________ */
-
-a,a:visited,a:hover,a:focus {color:#191919;text-decoration:none;}
-p   {font-size: 12px;margin-bottom: 15px;color: #464646;}
-em  {  }
-i  {  }
-b  {  }
-strong  {  }
+/*Selections*/
+::-moz-selection { background: #b3d4fc;text-shadow: none; }
+::selection      { background: #b3d4fc;text-shadow: none; }
 
 
-/*      .-----------.
-________|  Images   |________________________________ */
+/*
+.========================================================.
+|                     |  TEXT STYLES  |                       |
+.========================================================.
+*/
+
+/*Headers*/
+h1,h2,h3,h4 { margin: 0 0 10px 0; }
+
+h1 { font-size: 35px; }
+h2 { font-size: 25px; }
+h3 { font-size: 20px; }
+h4 { font-size: 15px; }
+
+/*Paragraph Elements*/
+a,a:visited,a:hover,a:focus { color:#191919;text-decoration:none; }
+p       { font-size: 12px;margin-bottom: 15px;color: #464646; }
+em      {}
+i       {}
+b       {}
+strong  {}
+
+
+
+/*
+.========================================================.
+|                     |  IMAGES  |                       |
+.========================================================.
+*/
 
 img { border: none;}
 img.fluid  { max-width:100%; }
 
 
-/*      .-------------------.
-________|  Definition List  |___________________________________ */
+/*
+.========================================================.
+|                     |  LISTS  |                       |
+.========================================================.
+*/
 
+/*Definition List*/
 dl {}
 dt {}
 dd {}
 
-/*      .----------------.
-________|  Ordered List  |______________________________________ */
-
-ol {padding-left: 15px;}
-ul {padding-left: 15px;}
+/*Ordered List*/
+ol { padding-left: 15px; }
+ul { padding-left: 15px; }
 li {}
 
-/*      .---------.
-________|  Forms  |_____________________________________________ */
+/*
+.========================================================.
+|                    |   FORMS   |                       |
+.========================================================.
+*/
 
 /*Form Elements*/
 fieldset                { border: 0;margin: 0;padding: 0; } 
@@ -112,12 +129,6 @@ select                  { width: 100%; padding: 1.5%; font-size: 14px;-webkit-ap
 optgroup                {  }
 option                  {  }
 
-/*Placeholder Styling*/
-::-webkit-input-placeholder { color:#4d4d4d; }
-:-moz-placeholder       {  color:#4d4d4d;  }
-::-moz-placeholder      {  color:#4d4d4d;  }
-:-ms-input-placeholder  {  color:#4d4d4d;  }
-
 /*Custom Checkbox*/
 .checkbox                           { width: 15px; position: relative; height: 25px; vertical-align: top; }
 .checkbox label                     { cursor: pointer; position: absolute; width: 15px; height: 15px; top: 0; background: #fff; border: 1px solid #2B2B2B;; }
@@ -127,16 +138,22 @@ option                  {  }
 .checkbox > input[type=checkbox]:checked + label:after
                                     { -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)"; filter: alpha(opacity=100); opacity: 1; }
 
-
-/*      .----------.
-________|  Tables  |____________________________________________ */
+/*
+.========================================================.
+|                    |  Tables  |                       |
+.========================================================.
+*/
 
 table   {}    
 tr      {}
 th      {}
 
-/*      .--------------.
-________|  Misc Stuff  |________________________________________ */
+
+/*
+.========================================================.
+|               |  Misc Stuff   |                      |
+.========================================================.
+*/
 
 sup        {}
 sub        {}
@@ -149,7 +166,40 @@ blockquote {}
 hr {display: block;height: 1px;border: 0;border-top: 1px solid #ccc;margin: 1em 0;padding: 0;}
 
 
-/* |=||=|=||=|=||=||=||=|=||=|=====|GRID|SYSTEM|=====|=|=||=|=||=|=||=||=||=|=||=||=|
+/*
+.========================================================.
+|               |  Global Colors  |                      |
+.========================================================.
+*/
+
+.red                { color: #C90010; }
+.green              {  }
+.blue               {  }
+.purple             {  }
+.orange             {  }
+.yellow             {  }
+.brown              {  }
+.grey               {  }
+.dark-grey          {  }
+.light-grey         {  }
+
+
+.red-bg             { color: #C90010; }
+.green-bg           {  }
+.blue-bg            {  }
+.purple-bg          {  }
+.orange-bg          {  }
+.yellow-bg          {  }
+.brown-bg           {  }
+.grey-bg            {  }
+.dark-grey-bg       {  }
+.light-grey-bg      {  }
+
+
+
+
+
+/* [ II ] |=||=|=||=|=||=||=|=||=|====|GRID|SYSTEM|====|=|=||=|=||=|=||=||=||=|=||=|
 ====================================================================================
 
 FORMULA FOR 100% 1 Col          ==   .row>.col.col-1 (Emmet Compatible)
@@ -161,7 +211,7 @@ FORMULA FOR 100% CENTERED       ==   .row>.wrapper>.col.col-1 (Emmet Compatible)
 ==================================================================================== */
 
 /*Grid*/
-.grid                               { display: block;text-align: left;font-size: 0em;margin: 0% -1.5%;padding: 0%;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
+.grid                               { display: block;text-align: left;;margin: 0% -1.5%;padding: 0%;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
 
 /*Wrapper*/
 .wrapper                            { margin: 0 auto;max-width: 1024px;padding: 0 3%; }
@@ -198,63 +248,34 @@ FORMULA FOR 100% CENTERED       ==   .row>.wrapper>.col.col-1 (Emmet Compatible)
 .fithteen.column.grid >.column      { width: 6.6666%; }
 .sixteen.column.grid >.column       { width: 6.25%; }
 
-/*Blocks*/
-.block                              { position: relative;transition: all .3s ease;}
-.block img                          { width:100%;overflow:hidden;-moz-border-radius: 5px; border-radius: 5px;}
-
-/*Grid Extras*/                                    
-.push-center                        { margin: 0 6%; }
-.push-center:before,
-.push-center:after                  { content: " ";display: table; }
-.push-center:after                  { clear: both; }
-
-/*Grid Example*/
-#grid .block                        { min-height: 250px;text-shadow: 0 1px 0 #fff;transition: all 1s 1s 1s;border-radius: 8px; }
-#grid .block span                   { text-align: center;vertical-align: middle;line-height: 250px;display: block;font-size:50px;font-size: 110px;font-weight: bold;color: #727272; }
-#grid .grid                          { margin-bottom: 40px; }
-#grid .noise:before                 { border-radius: 8px; }
-
-/*Table of Contents*/
-.toc                                { background: #2C2C2C;padding: 20px 0; margin-bottom: 20px; color: #fff; }
-.toc a                              { color: #fff; }
-
-
-/*
-.========================================================.
-|               |  Global Colors  |                      |
-.========================================================.
-*/
-
-.red                { color: #C90010; }
-.green              {  }
-.blue              {  }
-.purple              {  }
-.orange              {  }
-.yellow              {  }
-.brown              {  }
-.grey              {  }
-.dark-grey              {  }
-.light-grey              {  }
-
-
 
 /*
 .========================================================.
 |                   |  Buttons  |                        |
 .========================================================.
 */
-.button                 { display: inline-block;color: #fff;background: #C90010;font-weight: 300;cursor: pointer;-webkit-appearance: none;border: none; }
+.button                 { display: inline-block;color: #fff;background: #C90010;font-weight: 300;cursor: pointer;-webkit-appearance: none;-moz-appearance: none;border: none;-webkit-transition: all .8s ease;-moz-transition: all .8s ease;-ms-transition: all .8s ease;-o-transition: all .8s ease;transition: all .8s ease; }
 .button:hover           { background: #F62132;  }
 .button span            { display: block;color: #fff; padding: 6px 15px; font-size: 18px; text-transform: uppercase; }
 
 /*Button Sizes*/
-.button.tiny span      { padding: 15px 30px; }
-.button.mini span      { padding: 15px 30px; }
+.button.tiny span       { padding: 15px 30px; }
+.button.mini span       { padding: 15px 30px; }
 .button.small span      { padding: 15px 30px; }
-.button.big span      { padding: 15px 30px; }
-.button.huge span      { padding: 15px 30px; }
-.button.enormous span      { padding: 15px 30px; }
+.button.big span        { padding: 15px 30px; }
+.button.huge span       { padding: 15px 30px; }
+.button.enormous span   { padding: 15px 30px; }
 
+
+/*
+.========================================================.
+|               |  Color Splits  |                       |
+.========================================================.
+*/
+#color-split              { position: relative;  }
+#color-split .wrapper     { position: relative;z-index:50;  }
+#color-split .split-left  { position: absolute;top: 0px;left: 0px;width: 50%;height: 100%;z-index: 1; }
+#color-split .split-right { position: absolute;top: 0px;right: 0px;width: 50%;height: 100%;z-index: 1; }
 
 
 /*
@@ -287,7 +308,6 @@ label.error                             { display: block !important; color: #AA0
 .user-avatar.mini       { width: 48px;height: 48px; }
 
 
-
 /*
 .========================================================.
 |                   |  Arrows  |                         |
@@ -299,28 +319,6 @@ label.error                             { display: block !important; color: #AA0
 .arrow.right        { border-width: 10px 0 10px 15px; border-color: transparent transparent transparent #C90010; } 
 .arrow.left         { border-width: 10px 15px 10px 0;border-color: transparent #C90010 transparent transparent; }
 
-
-
-/* ----------------------->>>>>>> PAGE STRUCTURE <<<<<<<----------------------------
-==================================================================================== */
-
-/*      .----------.
-________|  Header  |__________________________________________*/
-
-header              {  }
-nav                 {  }
-
-/*      .-----------.
-________|  Content  |__________________________________________*/
-
-section             {  }
-article             {  }
-aside               {  }
-
-/*      .----------.
-________|  Footer  |__________________________________________*/
-
-footer              {  }
 
 
 /* ------------------------>>>>>>> HELPER CLASSES <<<<<<<---------------------------
@@ -341,19 +339,39 @@ footer              {  }
 .cf:before,.cf:after {content: " ";display: table;}
 .cf:after {clear: both;}
 
-.f-l            {float:left}
-.f-r            {float:right}
-.clear          {clear:both}
-.center         {display: table;width: 100%;height: 100%;}
-.center span    {display: table-cell; vertical-align: middle; text-align: center;}
-.margins        {margin:15px}
-.border         {border:10px solid #eee}
-.text-left         {text-align:left}
-.text-right         {text-align:right}
-.text-center         {text-align:center}
-.text-justify         {text-align:justify}
-.underline      {text-decoration:underline}
-.highlight      {background-color:#ffc}
+.f-l            { float:left }
+.f-r            { float:right }
+.clear          { clear:both }
+.center         { display: table;width: 100%;height: 100%; }
+.center span    { display: table-cell; vertical-align: middle; text-align: center; }
+.margins        { margin:15px }
+.border         { border:10px solid #eee }
+.text-left      { text-align:left }
+.text-right     { text-align:right }
+.text-center    { text-align:center }
+.text-justify   { text-align:justify }
+.underline      { text-decoration:underline }
+.highlight      { background-color:#ffc }
+
+/*Bounce Hover Effect*/
+@-webkit-keyframes bounce {
+    0% { -webkit-transform: scale(1.0); }
+   10% { -webkit-transform: scale(1.1); }   
+   20% { -webkit-transform: scale(1.08); }
+   30% { -webkit-transform: scale(1.0); }
+   40% { -webkit-transform: scale(1.02); } 
+   50% { -webkit-transform: scale(1.0); } 
+}
+
+@keyframes bounce {
+    0% { -webkit-transform: scale(1.0); }
+   10% { -webkit-transform: scale(1.1); }   
+   20% { -webkit-transform: scale(1.08); }
+   30% { -webkit-transform: scale(1.0); }
+   40% { -webkit-transform: scale(1.02); } 
+   50% { -webkit-transform: scale(1.0); }     
+}
+
 
 /* 
 ====================================================================================
