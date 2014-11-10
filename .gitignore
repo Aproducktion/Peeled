@@ -35,3 +35,11 @@
 .Trashes
 ehthumbs.db
 Thumbs.db
+
+# Ignore everything
+/*
+
+
+#Except
+!.gitignore
+!css/peeled.css
