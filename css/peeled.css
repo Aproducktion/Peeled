@@ -2,7 +2,7 @@
 /*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^*/
 
 /*
-Version: Alpha v1.2;
+Version: Beta v1.2;
 Author: Bryan Littlefield;
 License: GPL;
 ----------------------------
@@ -12,9 +12,9 @@ License: GPL;
 
 I.................GLOBALS
 II............GRID SYSTEM
-III..........PAGE STYLING
-IV..........MEDIA QUERIES
-V.................HELPERS
+III.....RESUABLE ELEMENTS
+IV................HELPERS
+V...........MEDIA QUERIES
 
 */
 
@@ -172,28 +172,25 @@ hr {display: block;height: 1px;border: 0;border-top: 1px solid #ccc;margin: 1em 
 .========================================================.
 */
 
-.red                { color: #C90010; }
-.green              {  }
-.blue               {  }
-.purple             {  }
-.orange             {  }
-.yellow             {  }
-.brown              {  }
-.grey               {  }
-.dark-grey          {  }
-.light-grey         {  }
+/*Color*/
+.red                { color: #CA2429; }
+.green              { color: #61C374; }
+.blue               { color: #57A5DF; }
+.purple             { color: #B955B9; }
+.orange             { color: #F27A2F; }
+.grey               { color: #333333; }
+.dark-grey          { color: #303030; }
+.light-grey         { color: #DCDCDC; }
 
-
-.red-bg             { color: #C90010; }
-.green-bg           {  }
-.blue-bg            {  }
-.purple-bg          {  }
-.orange-bg          {  }
-.yellow-bg          {  }
-.brown-bg           {  }
-.grey-bg            {  }
-.dark-grey-bg       {  }
-.light-grey-bg      {  }
+/*Backgrounds*/
+.red-bg             { background-color: #CA2429; }
+.green-bg           { background-color: #61C374; }
+.blue-bg            { background-color: #57A5DF; }
+.purple-bg          { background-color: #B955B9; }
+.orange-bg          { background-color: #F27A2F; }
+.grey-bg            { background-color: #333333; }
+.dark-grey-bg       { background-color: #303030; }
+.light-grey-bg      { background-color: #DCDCDC; }
 
 
 
@@ -248,6 +245,8 @@ FORMULA FOR 100% CENTERED       ==   .row>.wrapper>.col.col-1 (Emmet Compatible)
 .fithteen.column.grid >.column      { width: 6.6666%; }
 .sixteen.column.grid >.column       { width: 6.25%; }
 
+/* [ III ] ----------------->>>>>>> REUSABLE ELEMENTS <<<<<<<------------------------
+==================================================================================== */
 
 /*
 .========================================================.
@@ -321,7 +320,7 @@ label.error                             { display: block !important; color: #AA0
 
 
 
-/* ------------------------>>>>>>> HELPER CLASSES <<<<<<<---------------------------
+/* [ IV ] -------------------->>>>>>> HELPER CLASSES <<<<<<<------------------------
 ==================================================================================== */
 
 /*Noise*/
@@ -375,7 +374,7 @@ label.error                             { display: block !important; color: #AA0
 
 /* 
 ====================================================================================
------------------------------->>>>>>> MEDIA QUERIES <<<<<<<-------------------------
+[ V ] -------------------------->>>>>>> MEDIA QUERIES <<<<<<<-----------------------
 ==================================================================================== */
 
 /* Smartphones (portrait and landscape)*/
