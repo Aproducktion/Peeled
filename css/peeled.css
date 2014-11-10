@@ -219,7 +219,7 @@ FORMULA FOR 100% CENTERED       ==   .row>.wrapper>.col.col-1 (Emmet Compatible)
 .wrapper:after                      { clear: both;visibility: hidden; }
 
 /*Rows*/
-.row                                { width: 100%;}
+.row                                { }
 .row:before,.row:after              { content: " ";display: table; }
 .row:after                          { clear: both; visibility: hidden; }
 
