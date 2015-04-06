@@ -256,6 +256,17 @@ FORMULA FOR 100% CENTERED       ==   .row>.wrapper>.col.col-1 (Emmet Compatible)
 .button.enormous span      { padding: 15px 30px; }
 
 
+.========================================================.
+|               |  Color Splits  |                       |
+.========================================================.
+*/
+#color-split              { position: relative;  }
+#color-split .wrapper     { position: relative;z-index:50;  }
+#color-split .split-left  { position: absolute;top: 0px;left: 0px;width: 50%;height: 100%;z-index: 1; }
+#color-split .split-right { position: absolute;top: 0px;right: 0px;width: 50%;height: 100%;z-index: 1; }
+
+
+
 
 /*
 .========================================================.
